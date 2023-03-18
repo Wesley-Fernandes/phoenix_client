@@ -1,0 +1,12 @@
+.MessagesComponents{
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+    padding: 0.2rem;
+
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}

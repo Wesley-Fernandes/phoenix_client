@@ -1,0 +1,32 @@
+.MessageBox{
+    padding: 0.2rem;
+    width: 100%;
+    margin: 0.2rem 0;
+    overflow-x: hidden;
+
+    display: flex;
+    align-items: center;
+
+    p{
+        background-color: black;
+        padding: 0.4rem;
+        border-radius: 5px;
+        min-height: 40px;
+
+        word-wrap: break-word;
+        padding-top: 1rem;
+    }
+
+    img{
+        height: 40px;
+        width: 40px;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+    .MessageAuthor{
+        position: relative;
+        z-index: 2;
+        top: 10px;
+        font-size: 1.2rem;
+    }
+}

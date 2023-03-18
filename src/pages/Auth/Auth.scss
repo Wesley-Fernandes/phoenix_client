@@ -1,0 +1,8 @@
+.AuthPage{
+    height: 100vh;
+    .AuthMain{
+        height: calc(100vh - 58px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}
