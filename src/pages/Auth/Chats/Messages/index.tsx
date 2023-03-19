@@ -18,7 +18,7 @@ export interface IMessage{
 export default function Messages() {
   const {savedSocket} = useSocketStore();
   const [messages, setMessages ]= useState<any>([]);
-  const newMarker = useRef<HTMLDivElement>(null)
+  const newMarker = useRef<HTMLUListElement>(null)
 
   useEffect(()=>{
     savedSocket?.on("new_message", (newMessage:any)=>{
@@ -30,13 +30,18 @@ export default function Messages() {
 
   useEffect(()=>{
     newMarker.current?.scrollTo({top: newMarker.current.scrollHeight});
-  }, [messages])
+  }, [messages]);
+
+
+
+
+
   return (
-    <div className="MessagesComponents" ref={newMarker}>
+    <ul className="MessagesComponents" ref={newMarker}>
         {messages.map((message:IMessage) => (
           <Message key={message.id} informations={message} />
         ))
         }
-    </div>
+    </ul>
   );
 }

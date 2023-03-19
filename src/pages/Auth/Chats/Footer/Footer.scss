@@ -1,11 +1,35 @@
-.FooterComponent{
+.formulary-chat-message{
     height: 50px;
     max-height: 50px;
     min-height: 50px;
     width: 100%;
     display: flex;
+    background-color: black;
+    padding: 0.2rem;
+
+
+    justify-content: space-around;
     input{
-        width: 100%;
+        display: flex;
+        flex: 1;
         height: 100%;
+        border: none;
+        border-radius: none;
+        padding: 0.2rem;
+
+        &:focus{
+            border: none;
+            outline: none;
+        }
+
+        &:active{
+            border: none;
+        }
+    }
+    button{
+        min-width: 80px;
+        border: none;
+        border-radius: none;
+        padding: 0.4rem 0;
     }
 }

@@ -3,22 +3,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     max-width: 500px;
+    overflow: hidden;
+    background: linear-gradient(rgb(199, 14, 14), black 50%);
 
     img{
         width: 150px;
+        height: 150px;
         margin: 0.4rem;
     }
 
-    .toolbar{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 50px;
-    }
     .formularys{
-        height: calc(100vh - 50px);
+        height: 400px;
         width: 100%;
         display: flex;
         align-items: center;

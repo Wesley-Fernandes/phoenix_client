@@ -1,6 +1,6 @@
 
 .formulary{
-    height: 100%;
+    height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,10 +8,23 @@
     justify-content: center;
     padding: 0.2rem;
 
+    h1{
+        text-transform: uppercase;
+    }
+
     input{
         margin: 0.2rem;
     }
     button{
         margin: 0.2rem;
+    }
+
+    small{
+        margin: 1.5rem;
+        span{
+            margin-left: 0.2rem;
+            color: rgb(255, 51, 0);
+            text-decoration: underline;
+        }
     }
 }

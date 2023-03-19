@@ -1,7 +1,5 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, useRef } from "react";
 
-//components
-import { InputText } from "primereact/inputtext";
 
 //styles
 import "./Footer.scss";
@@ -10,6 +8,7 @@ import { useSocketStore } from "../../../../store/store";
 
 export default function Footer() {
   const { savedSocket } = useSocketStore();
+  const formComponent = useRef<HTMLFormElement>(null);
 
   const submitter = async (event: FormEvent) => {
     event.preventDefault();
@@ -17,18 +16,29 @@ export default function Footer() {
       text: { value: string };
     };
 
-    const picture = "https://i.pinimg.com/736x/13/e7/8b/13e78b5d5a1272863c07106a9ff593b9.jpg"
+    const picture = "https://i.pinimg.com/736x/13/e7/8b/13e78b5d5a1272863c07106a9ff593b9.jpg";
     const text = target.text.value;
-    if(text===""){
+    if (text === "") {
       alert("Você não pode enviar 'nada'.");
-      return
+      return;
     }
-    savedSocket.emit("message", {text, picture});
+    savedSocket.emit("message", { text, picture });
+    formComponent?.current?.reset();
   };
   return (
-    <form className="FooterComponent" onSubmit={submitter}>
-      <InputText name="text" type={"text"} />
-      <Button label="Enviar" type="submit" />
+    <form
+      className="formulary-chat-message"
+      onSubmit={submitter}
+      autoComplete="off"
+      ref={formComponent}>
+      <input
+        name="text"
+        type="text"
+        autoCapitalize="off"
+        placeholder="Digite sua mensagem..."/>
+      <button type="submit">
+        <button>Enviar</button>
+      </button>
     </form>
   );
 }

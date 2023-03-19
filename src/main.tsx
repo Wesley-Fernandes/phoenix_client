@@ -7,6 +7,7 @@ import { RouterProvider } from 'react-router-dom';
 import {router} from './router';
 
 //theme
+import 'animate.css';
 import "primereact/resources/themes/mdc-dark-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";

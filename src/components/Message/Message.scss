@@ -1,32 +1,151 @@
-.MessageBox{
-    padding: 0.2rem;
-    width: 100%;
-    margin: 0.2rem 0;
-    overflow-x: hidden;
-
+.MessageBox-Mine{
     display: flex;
-    align-items: center;
+    justify-content: end;
 
-    p{
+    max-height: max-content;
+    width: 100%;
+    margin: 0.5rem 0;
+
+
+    list-style-type: none;
+    list-style: none;
+
+    .MessageComponents{
+        display: flex;
+        width: fit-content;
+        max-width: 98%;
+        padding: 0.2rem;
+
+
+        align-items: center;
+
+        outline: 1px solid #2e2e2e;
+        border-radius: 0 5px 5px 5px;
+        background-color: #1a1e29;
+        .Message-Container-Info{
+            width: 80px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+
+            img{
+                height: 40px;
+                width: 40px;
+                border-radius: 5px;
+                margin-right: 5px;
+                margin: 0.2rem 0;
+            }
+
+            .Message-Author-Name{
+                font-size: 1rem;
+                overflow: hidden;
+                color: #ffffff81;
+
+            }
+
+            .Message-Send-Time{
+                color: #ffffff81;
+            }
+        }
+
+        .Message-Text-Box{
+            min-height: 90%;
+            max-height: 100vh;
+            overflow: hidden;
+            height: fit-content;
+            min-width: 50px;
+            text-transform: capitalize;
+            max-width: 80%;
+            padding: 0.4rem;
+            border-radius: 5px;
+            word-wrap: break-word;
+            margin: 1rem 0;
+
+            background-color: #141820;
+            margin-left: 0.5rem;
+        }
+
+    }
+
+}
+
+
+.MessageBox-others{
+    display: flex;
+    justify-content: start;
+
+    max-height: max-content;
+    width: 100%;
+    margin: 0.5rem 0;
+
+
+    list-style-type: none;
+    list-style: none;
+
+    .MessageComponents{
+        display: flex;
+        width: fit-content;
+        max-width: 98%;
+        padding: 0.2rem;
+
+
+        outline: 1px solid #2e2e2e;
+        border-radius: 0 5px 5px 5px;
         background-color: black;
-        padding: 0.4rem;
-        border-radius: 5px;
-        min-height: 40px;
 
-        word-wrap: break-word;
-        padding-top: 1rem;
+
+        align-items: center;
+        .Message-Container-Info{
+            width: 80px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+
+            img{
+                height: 40px;
+                width: 40px;
+                border-radius: 5px;
+                margin-right: 5px;
+                margin: 0.2rem 0;
+            }
+
+            .Message-Author-Name{
+                font-size: 1rem;
+                overflow: hidden;
+                color: #ffffff81;
+
+            }
+
+            .Message-Send-Time{
+                color: #ffffff81;
+            }
+        }
+
+        .Message-Text-Box{
+            min-height: 90%;
+            max-height: 100vh;
+            overflow: hidden;
+            height: fit-content;
+            min-width: 50px;
+            text-transform: capitalize;
+            max-width: 80%;
+            padding: 0.4rem;
+            border-radius: 5px;
+            word-wrap: break-word;
+            margin: 1rem 0;
+
+            background-color: rgb(17, 17, 17);
+            margin-right: 0.5rem;
+
+        }
+
     }
 
-    img{
-        height: 40px;
-        width: 40px;
-        border-radius: 5px;
-        margin-right: 5px;
-    }
-    .MessageAuthor{
-        position: relative;
-        z-index: 2;
-        top: 10px;
-        font-size: 1.2rem;
-    }
+
 }
