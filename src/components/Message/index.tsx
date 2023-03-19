@@ -3,7 +3,7 @@ import React from 'react'
 //styles
 import "./Message.scss"
 function Message({informations}:any) {
-  const id = false;
+  const id = true;
   return (
     <>
     {
